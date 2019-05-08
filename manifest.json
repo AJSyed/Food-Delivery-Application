@@ -1,0 +1,168 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "com.incture.cherrywork.FoodApp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.incture.cherrywork.FoodApp.view.FirstPage",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.incture.cherrywork.FoodApp.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.incture.cherrywork.FoodApp.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteFirstPage",
+					"pattern": "RouteFirstPage",
+					"target": [
+						"TargetFirstPage"
+					]
+				},
+				{
+					"name": "RouteRestaurantPage",
+					"pattern": "RouteRestaurantPage",
+					"target": [
+						"RestaurantPage"
+					]
+				},
+				{
+					"name": "RouteRestaurantList",
+					"pattern": "RouteRestaurantList",
+					"target": [
+						"RestaurantList"
+					]
+				},
+				{
+					"name": "RouteAdminPage",
+					"pattern": "RouteAdminPage",
+					"target": [
+						"AdminPage"
+					]
+				},
+				{
+					"name": "RouteAdminManage",
+					"pattern": "RouteAdminManage",
+					"target": [
+						"AdminManage"
+					]
+				},
+				{
+					"name": "RouteDriverHomePage",
+					"pattern": "RouteDriverHomePage",
+					"target": [
+						"DriverHomePage"
+					]
+				},
+				{
+					"name": "RouteDriverPage",
+					"pattern": "RouteDriverPage",
+					"target": [
+						"DriverPage"
+					]
+				}
+			],
+			"targets": {
+				"TargetFirstPage": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "FirstPage"
+				},
+				"RestaurantPage": {
+					"viewType": "XML",
+					"viewName": "RestaurantPage"
+				},
+				"RestaurantList": {
+					"viewType": "XML",
+					"viewName": "RestaurantList"
+				},
+				"AdminPage": {
+					"viewType": "XML",
+					"viewName": "AdminPage"
+				},
+				"AdminManage": {
+					"viewType": "XML",
+					"viewName": "AdminManage"
+				},
+				"DriverHomePage": {
+					"viewType": "XML",
+					"viewName": "DriverHomePage"
+				},
+				"DriverPage": {
+					"viewType": "XML",
+					"viewName": "DriverPage"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}
